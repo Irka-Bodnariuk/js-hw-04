@@ -1,13 +1,9 @@
-const atTheOldToad = {
-  potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-  removePotion(potionName) {
-    // Change code below this line
-    // this.potions.indexOf(potionName)
-    this.potions.splice(this.potions.indexOf(potionName), 1);
-    // Change code above this line
-  },
-};
-atTheOldToad.removePotion('Dragon breath');
-console.log(atTheOldToad.potions);
-atTheOldToad.removePotion('Speed potion');
-console.log(atTheOldToad.potions);
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+console.log(ascendingReleaseDates);
+console.log(descendingReleaseDates);

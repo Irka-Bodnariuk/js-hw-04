@@ -1,65 +1,35 @@
-const atTheOldToad = {
-  potions: [
-    { name: 'Speed potion', price: 460 },
-    { name: 'Dragon breath', price: 780 },
-    { name: 'Stone skin', price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
   },
-  addPotion(newPotion) {
-    for (const potion of this.potions) {
-      if (potion.name === newPotion.name) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
-      }
-    }
-
-    this.potions.push(newPotion);
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
   },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      if (this.potions[i].name === potionName) {
-        return this.potions.splice(i, 1);
-      }
-    }
-
-    return `Potion ${potionName} is not in inventory!`;
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
   },
-  updatePotionName(oldName, newName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      if (this.potions[i].name === oldName) {
-        return (this.potions[i].name = newName);
-      }
-    }
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
+// Change code below this line
 
-    return `Potion ${oldName} is not in inventory!`;
-  },
-  // Change code above this line
-};
-
-// console.log(atTheOldToad.getPotions());
-
-// atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
-// atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
-
-// console.log(atTheOldToad.getPotions());
-
-// console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 }));
-// console.log(atTheOldToad.addPotion({ name: 'Stone skin', price: 240 }));
-
-// console.log(atTheOldToad.getPotions());
-
-// atTheOldToad.removePotion('Dragon breath');
-// atTheOldToad.removePotion('Speed potion');
-// atTheOldToad.removePotion('Speed123');
-
-// console.log(atTheOldToad.getPotions());
-
-// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
-// atTheOldToad.updatePotionName('Stone svdfvkin', 'Invulnerability potion');
-
-console.log(
-  atTheOldToad.updatePotionName('Stone svdfvkin', 'Invulnerability potion')
+const sortedByAuthorName = [...books].sort((a, b) =>
+  a.author.localeCompare(b.author)
 );
-console.log(atTheOldToad.getPotions());
+const sortedByReversedAuthorName = [...books].sort((a, b) =>
+  b.author.localeCompare(a.author)
+);
+
+const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+console.log(sortedByAuthorName);
+console.log(sortedByReversedAuthorName);
+console.log(sortedByAscendingRating);
+console.log(sortedByDescentingRating);

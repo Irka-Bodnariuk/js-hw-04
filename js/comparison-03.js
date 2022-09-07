@@ -1,18 +1,13 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-};
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
 
+makePizza('Royal Grand', function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
 // Change code below this line
-const aptRating = apartment.rating;
-const aptDescr = apartment.descr;
-const aptPrice = apartment.price;
-const aptTags = apartment.tags;
-// Change code above this line
-console.log(aptRating);
-console.log(aptDescr);
-console.log(aptPrice);
-console.log(aptTags);
+
+makePizza('Ultracheese', function eatPizza(pizzaName) {
+  console.log(`Eating pizza ${pizzaName}`);
+});

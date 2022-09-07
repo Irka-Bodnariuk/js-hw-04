@@ -1,27 +1,35 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-  owner: {
-    name: 'Henry',
-    phone: '982-126-1588',
-    email: 'henry.carter@aptmail.com',
+const pizzaPalace = {
+  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+  order(pizzaName, onSuccess, onError) {
+    for (const pizza of pizzaPalace.pizzas) {
+      if (pizzaName === pizza) {
+        return onSuccess(pizzaName);
+      }
+    }
+    return onError(
+      `There is no pizza with a name ${pizzaName} in the assortment.`
+    );
   },
 };
-
-// Change code below this line
-const ownerName = apartment.owner.name;
-const ownerPhone = apartment.owner.phone;
-const ownerEmail = apartment.owner.email;
-const numberOfTags = apartment.tags.length;
-const firstTag = apartment.tags[0];
-const lastTag = apartment.tags[apartment.tags.length - 1];
 // Change code above this line
-console.log(ownerName);
-console.log(ownerPhone);
-console.log(ownerEmail);
-console.log(numberOfTags);
-console.log(firstTag);
-console.log(lastTag);
+
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
+
+// Callback for onError
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
+
+// Method calls with callbacks
+pizzaPalace.order('Smoked', makePizza, onOrderError);
+pizzaPalace.order('Four meats', makePizza, onOrderError);
+pizzaPalace.order('Big Mike', makePizza, onOrderError);
+pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
+console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
+console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));

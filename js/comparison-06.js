@@ -1,20 +1,24 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-  owner: {
-    name: 'Henry',
-    phone: '982-126-1588',
-    email: 'henry.carter@aptmail.com',
-  },
-};
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+  // Change code below this line
 
-apartment.price = 5000;
-apartment.rating = 4.7;
-apartment.owner.name = 'Henry Sibola';
-apartment.tags.push('trusted');
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   if (numbers[i] > value) {
+  //     filteredNumbers.push(numbers[i]);
+  //   }
+  // }
+  numbers.forEach(element => {
+    if (element > value) {
+      filteredNumbers.push(element);
+    }
+  });
 
-// Change code below this line
-console.log(apartment);
+  // Change code above this line
+  return filteredNumbers;
+}
+
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));

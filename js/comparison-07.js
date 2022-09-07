@@ -1,18 +1,24 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4.7,
-  price: 5000,
-  tags: ['premium', 'promoted', 'top', 'trusted'],
-  owner: {
-    name: 'Henry Sibola',
-    phone: '982-126-1588',
-    email: 'henry.carter@aptmail.com',
-  },
-};
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  // Change code below this line
 
-// Change code below this line
-apartment.area = 60;
-apartment.rooms = 3;
-apartment.location = { country: 'Jamaica', city: 'Kingston' };
-console.log(apartment);
+  // for (let i = 0; i < firstArray.length; i += 1) {
+  //   if (secondArray.includes(firstArray[i])) {
+  //     commonElements.push(firstArray[i]);
+  //   }
+  // }
+  firstArray.forEach(element => {
+    if (secondArray.includes(element)) {
+      commonElements.push(element);
+    }
+  });
+
+  return commonElements;
+  // Change code above this line
+}
+
+console.log(getCommonElements([1, 2, 3], [2, 4]));
+console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]));
+console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+console.log(getCommonElements([1, 2, 3], [10, 20, 30]));

@@ -1,12 +1,15 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-  owner: {
-    name: 'Henry',
-    phone: '982-126-1588',
-    email: 'henry.carter@aptmail.com',
-  },
-};
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
+
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
+
+// Chande code below this line
+function makeMessage(pizzaName, callback) {
+  return callback(pizzaName);
+}
+
+console.log(makeMessage('Royal Grand', makePizza));
+console.log(makeMessage('Ultracheese', deliverPizza));

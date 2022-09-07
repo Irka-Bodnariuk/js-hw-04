@@ -1,9 +1,10 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-};
+function makePizza() {
+  return 'Your pizza is being prepared, please wait.';
+}
+// Change code below this line
 
-console.table(apartment);
+const result = makePizza();
+const pointer = makePizza;
+
+console.log(result);
+console.log(pointer);

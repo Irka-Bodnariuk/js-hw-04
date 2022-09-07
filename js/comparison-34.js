@@ -1,21 +1,14 @@
-const bookShelf = {
-  // Change code below this line
-  books: ['The last kingdom', 'The guardian of dreams'],
-  getBooks() {
-    return 'Returning all books';
-  },
-  addBook(bookName) {
-    return `Adding book ${bookName}`;
-  },
-  // Change code above this line
-  removeBook(bookName) {
-    return `Deleting book ${bookName}`;
-  },
-  updateBook(oldName, newName) {
-    return `Updating book ${oldName} to ${newName}`;
-  },
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244,
 };
-console.log(bookShelf.getBooks());
-console.log(bookShelf.addBook('Haze'));
-console.log(bookShelf.removeBook('Red sunset'));
-console.log(bookShelf.updateBook('Sands of dune', 'Dune'));
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// Change code below this line
+
+const totalPlayTime = playtimes.reduce((acc, time) => acc + time);
+console.log(totalPlayTime);
+// Change code above this line
+const averagePlayTime = totalPlayTime / playtimes.length;
+console.log(averagePlayTime);

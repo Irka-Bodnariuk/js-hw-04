@@ -1,17 +1,22 @@
-// Change code below this line
-function addOverNum(num, ...args) {
-  let total = 0;
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Change below this line
 
-  for (const arg of args) {
-    if (num < arg) {
-      total += arg;
-    }
-  }
+const anyElementInFirstIsEven = firstArray.some(element => element % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some(element => element % 2 !== 0);
 
-  return total;
-  // Change code above this line
-}
-console.log(addOverNum(50, 15, 27));
-console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
-console.log(addOverNum(15, 32, 6, 13, 19, 8));
-console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+const anyElementInSecondIsEven = secondArray.some(element => element % 2 === 0);
+const anyElementInSecondIsOdd = secondArray.some(element => element % 2 !== 0);
+
+const anyElementInThirdIsEven = thirdArray.some(element => element % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some(element => element % 2 !== 0);
+
+console.log(anyElementInFirstIsEven);
+console.log(anyElementInFirstIsOdd);
+
+console.log(anyElementInSecondIsEven);
+console.log(anyElementInSecondIsOdd);
+
+console.log(anyElementInThirdIsEven);
+console.log(anyElementInThirdIsOdd);

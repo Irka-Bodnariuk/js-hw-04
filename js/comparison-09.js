@@ -1,11 +1,4 @@
-const emailInputName = 'email';
-const passwordInputName = 'password';
+// Change code below this line
+const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
 
-const credentials = {
-  // Change code below this line
-  [emailInputName]: 'henry.carter@aptmail.com',
-  [passwordInputName]: 'jqueryismyjam',
-  // Change code above this line
-};
-
-console.log(credentials);
+// Change code above this line

@@ -1,13 +1,15 @@
-const atTheOldToad = {
-  potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-  updatePotionName(oldName, newName) {
-    // Change code below this line
-    this.potions.splice(this.potions.indexOf(oldName), 1, newName);
-    // this.potions.indexOf(oldName)
-    // Change code above this line
-  },
-};
-atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
-console.log(atTheOldToad.potions);
-atTheOldToad.updatePotionName('Stone skin', 'Invisibility');
-console.log(atTheOldToad.potions);
+const authors = [
+  'Tanith Lee',
+  'Bernard Cornwell',
+  'Robert Sheckley',
+  'Fyodor Dostoevsky',
+  'Howard Lovecraft',
+];
+// Change code below this line
+
+const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+console.log(authorsInAlphabetOrder);
+console.log(authorsInReversedOrder);

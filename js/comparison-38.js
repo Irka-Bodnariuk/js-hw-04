@@ -1,11 +1,15 @@
-const atTheOldToad = {
-  potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-  addPotion(potionName) {
-    // Change code below this line
-    this.potions.push(potionName);
-    return this.potions;
-    // Change code above this line
-  },
-};
-console.log(atTheOldToad.addPotion('Invisibility'));
-console.log(atTheOldToad.addPotion('Power potion'));
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  'Tanith Lee',
+  'Bernard Cornwell',
+  'Robert Sheckley',
+  'Fyodor Dostoevsky',
+];
+// Change code below this line
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();
+
+console.log(ascendingReleaseDates);
+console.log(alphabeticalAuthors);

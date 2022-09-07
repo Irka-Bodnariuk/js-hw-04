@@ -1,25 +1,24 @@
-const products = [
-  { name: 'Radar', price: 1300, quantity: 4 },
-  { name: 'Scanner', price: 2700, quantity: 3 },
-  { name: 'Droid', price: 400, quantity: 7 },
-  { name: 'Grip', price: 1200, quantity: 9 },
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    genres: ['adventure', 'history'],
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    genres: ['fiction', 'mysticism'],
+  },
+  {
+    title: 'Redder Than Blood',
+    author: 'Tanith Lee',
+    genres: ['horror', 'mysticism', 'adventure'],
+  },
 ];
-
-function calculateTotalPrice(productName) {
-  // Change code below this line
-  let total = 0;
-
-  for (const product of products) {
-    if (product.name === productName) {
-      total = product.price * product.quantity;
-      return total;
-    }
-  }
-  return total;
-  // Change code above this line
-}
-console.log(calculateTotalPrice('Blaster'));
-console.log(calculateTotalPrice('Radar'));
-console.log(calculateTotalPrice('Droid'));
-console.log(calculateTotalPrice('Grip'));
-console.log(calculateTotalPrice('Scanner'));
+// Change code below this line
+const allGenres = books.flatMap(book => book.genres);
+const uniqueGenres = allGenres.filter(
+  (element, index, array) => array.indexOf(element) === index
+);
+console.log(allGenres);
+console.log(uniqueGenres);

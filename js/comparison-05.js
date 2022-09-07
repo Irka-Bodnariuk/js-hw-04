@@ -1,18 +1,18 @@
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-};
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Change code below this line
 
-// Change code below this line
-const aptRating = apartment['rating'];
-const aptDescr = apartment['descr'];
-const aptPrice = apartment['price'];
-const aptTags = apartment['tags'];
-// Change code above this line
-console.log(aptRating);
-console.log(aptDescr);
-console.log(aptPrice);
-console.log(aptTags);
+  // for (let i = 0; i < orderedItems.length; i += 1) {
+  //   totalPrice += orderedItems[i];
+  // }
+  orderedItems.forEach(function (element) {
+    totalPrice += element;
+  });
+
+  // Change code above this line
+  return totalPrice;
+}
+
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));

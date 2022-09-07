@@ -1,15 +1,10 @@
-const name = 'Repair Droid';
-const price = 2500;
-const image = 'https://via.placeholder.com/640x480';
-const tags = ['on sale', 'trending', 'best buy'];
+// Change code below this line
 
-const product = {
-  // Change code below this line
-  name,
-  price,
-  image,
-  tags,
+const calculateTotalPrice = (quantity, pricePerItem) => {
   // Change code above this line
+  return quantity * pricePerItem;
 };
 
-console.log(product);
+console.log(calculateTotalPrice(5, 100));
+console.log(calculateTotalPrice(8, 60));
+console.log(calculateTotalPrice(3, 400));

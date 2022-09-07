@@ -1,10 +1,22 @@
-const apartment = {
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-};
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
 // Change code below this line
-const keys = Object.keys(apartment);
-const values = Object.values(apartment);
-console.log(keys);
-console.log(values);
+
+const titles = books.map(book => book.title);

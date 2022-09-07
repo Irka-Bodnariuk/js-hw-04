@@ -1,14 +1,26 @@
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
-// Change code below this line
-const allScores = [
-  ...firstGroupScores,
-  ...secondGroupScores,
-  ...thirdGroupScores,
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
 ];
-const bestScore = Math.max(...allScores);
-const worstScore = Math.min(...allScores);
-console.log(allScores);
-console.log(bestScore);
-console.log(worstScore);
+const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+const AUTHOR = 'Robert Sheckley';
+// Change code below this line
+
+const bookWithTitle = books.find(book => book.title === BOOK_TITLE);
+const bookByAuthor = books.find(book => book.author === AUTHOR);
+console.log(bookWithTitle);
+console.log(bookByAuthor);

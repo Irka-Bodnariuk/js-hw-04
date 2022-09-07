@@ -1,12 +1,20 @@
-const apartment = {
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-};
-const values = [];
-// Change code below this line
-const keys = Object.keys(apartment);
-for (const key of keys) {
-  values.push(apartment[key]);
+function changeEven(numbers, value) {
+  // Change code below this line
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   if (numbers[i] % 2 === 0) {
+  //     numbers[i] = numbers[i] + value;
+  //   }
+  // }
+
+  const newNumbers = [];
+  numbers.forEach(element => {
+    if (element % 2 === 0) {
+      newNumbers.push(element + value);
+    } else {
+      newNumbers.push(element);
+    }
+  });
+  return newNumbers;
+  // Change code above this line
 }
-console.log(values);
+console.log(changeEven([1, 2, 3, 4, 5], 10));
